@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 
 app.use(bodyParser.json());// show that which type of data in coming from body 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(cors());
 
 const productRouts = require('./api/routes/product');
 
